@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/components/styles/Home.module.css'
+import Head from "next/head";
+import { Manrope } from "next/font/google";
+import { Alert, Button, Chip, Label, Tag } from "../DesignSystem";
+import { Check } from "@phosphor-icons/react";
 
-const inter = Inter({ subsets: ['latin'] })
+const manrope = Manrope({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,101 +14,84 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
+      <main className={`${manrope.className}`}>
+        <div
+          style={{
+            display: "flex",
+            gap: "8px",
+          }}
+        >
+          <Button onClick={() => {}} type="primary">
+            primary
+          </Button>
+          <Button onClick={() => {}} type="secondary">
+            secondary
+          </Button>
+          <Button onClick={() => {}} type="tertiary">
+            tertiary
+          </Button>
+          <Button onClick={() => {}} type="danger">
+            danger
+          </Button>
         </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+        <div
+          style={{
+            display: "flex",
+            gap: "8px",
+            marginTop: "8px",
+          }}
+        >
+          <Tag type="success">32</Tag>
+          <Tag type="info">32</Tag>
+          <Tag type="danger">32</Tag>
         </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+        <div
+          style={{
+            display: "flex",
+            gap: "8px",
+            marginTop: "8px",
+          }}
+        >
+          <Chip type="primary" onClick={() => {}}>
+            <Check /> Figma
+          </Chip>
+          <Chip type="secondary">Wireframes</Chip>
         </div>
+        <div
+          style={{
+            display: "flex",
+            gap: "8px",
+            marginTop: "8px",
+          }}
+        >
+          <Label type="success">Good</Label>
+          <Label type="warning">Fair</Label>
+          <Label type="danger">Bad</Label>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            gap: "8px",
+            marginTop: "8px",
+            maxWidth: "500px",
+            flexWrap: "wrap",
+          }}
+        >
+          <Alert onDismiss={() => {}} onUndo={() => {}} type="success">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </Alert>
+          <Alert onDismiss={() => {}} type="danger">
+            Bad
+          </Alert>
+        </div>
+        <div id="tooltip-portal"></div>
       </main>
     </>
-  )
+  );
 }
