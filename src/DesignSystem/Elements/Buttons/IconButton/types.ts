@@ -1,7 +1,7 @@
-import { ButtonProps } from "@/root/DesignSystem/Atoms/Button/types";
+import { ReactNode } from "react";
 
-export type IconButtonType = "outlined" | "filled" | "unstyled";
-
-export interface IconButtonProps extends ButtonProps {
-  iconButtonType: IconButtonType;
+export interface IconButtonProps {
+  children: ReactNode;
+  outlined?: boolean;
+  onClick?: () => void;
 }

@@ -20,19 +20,26 @@ export default {
         cursor: pointer;
       }
     `,
+    warning: `
+      background-color: ${colors.yellow[100]};
+      color: ${colors.neutralScale[800]};
+      border: 1px solid ${colors.yellow[700]};
+      svg {
+        min-width: 16px;
+        cursor: pointer;
+      }
+    `,
   },
   button: {
     primary: `
       background-color: ${colors.green[700]};
       color: ${colors.white};
       border: 1.5px solid transparent;
-      box-shadow: 0px 2px 0px 0px ${colors.green[800]};
       &:hover {
         background-color: ${colors.green[600]};
         &:active {
           background-color: ${colors.green[800]};
-          transform: translateY(2px);
-          box-shadow: unset;
+          transform: translateY(1px);
         }
       }
     `,
@@ -40,13 +47,11 @@ export default {
       background-color: ${colors.neutralScale[200]};
       color: ${colors.neutralScale[500]};
       border: 1.5px solid transparent;
-      box-shadow: 0px 2px 0px 0px ${colors.neutralScale[300]};
       &:hover {
         background-color: ${colors.neutralScale[100]};
         &:active {
           background-color: ${colors.neutralScale[300]};
-          transform: translateY(2px);
-          box-shadow: unset;
+          transform: translateY(1px);
         }
       }
     `,
@@ -55,20 +60,18 @@ export default {
       color: ${colors.green[700]};
       border: 1.5px solid transparent;
       &:hover:active {
-        transform: translateY(2px);
+        transform: translateY(1px);
       }
     `,
     danger: `
       background-color: ${colors.red[500]};
       color: ${colors.white};
       border: 1.5px solid transparent;
-      box-shadow: 0px 2px 0px 0px ${colors.red[600]};
       &:hover {
         background-color: ${colors.red[400]};
         &:active {
           background-color: ${colors.red[600]};
-          transform: translateY(2px);
-          box-shadow: unset;
+          transform: translateY(1px);
         }
       }
     `,

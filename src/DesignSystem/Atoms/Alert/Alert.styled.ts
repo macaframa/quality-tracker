@@ -8,8 +8,8 @@ export const StatusIconWrapper = styled.div`
 
 export const AlertText = styled.div`
   overflow: hidden;
-  max-height: 1rem;
-  line-height: 1rem;
+  max-height: 1.5rem;
+  line-height: 1.5rem;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   text-overflow: ellipsis;
@@ -42,4 +42,5 @@ export const Alert = styled.div<{ $type: AlertType }>`
   gap: 16px;
   align-items: center;
   width: -webkit-fill-available;
+  border-radius: 4px;
 `;

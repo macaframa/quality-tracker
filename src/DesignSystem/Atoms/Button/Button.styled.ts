@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { ButtonType } from "@/root/styles/types";
+import { ButtonSeverityType } from "@/root/styles/types";
 
-export const Button = styled.button<{ $type: ButtonType }>`
-  ${({ theme, $type }) => theme.palette.button[$type]}
+export const Button = styled.button<{ $severity: ButtonSeverityType }>`
+  ${({ theme, $severity }) => theme.palette.button[$severity]}
   ${({ theme }) => theme.fonts.bold.lg}
   ${({ theme }) => `
     padding: ${theme.spacing.xs}px ${theme.spacing.xl}px;

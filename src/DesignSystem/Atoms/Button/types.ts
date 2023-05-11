@@ -1,8 +1,8 @@
-import { PropsWithChildren } from "react";
-import { ButtonType } from "@/root/styles/types";
+import { ButtonSeverityType } from "@/root/styles/types";
+import { ButtonProps as buttonProps } from "@mui/base";
 
-export interface ButtonProps extends PropsWithChildren {
+export interface ButtonProps extends buttonProps {
   "data-testid"?: string;
-  onClick: () => void;
-  type: ButtonType;
+  onClick?: () => void;
+  severity: ButtonSeverityType;
 }
