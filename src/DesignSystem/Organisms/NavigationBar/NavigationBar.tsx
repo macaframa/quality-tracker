@@ -17,7 +17,9 @@ function NavigationBar() {
       <Rocket size={32} />
       <Styled.Links>
         {links.map(({ title, href }, key) => (
-          <Link href={href}>{title}</Link>
+          <Link key={`${key}-${title}`} href={href}>
+            {title}
+          </Link>
         ))}
       </Styled.Links>
     </Styled.NavigationBar>
