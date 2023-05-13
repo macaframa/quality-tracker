@@ -13,7 +13,7 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - run: sudo apt install nvm
+      - run: sudo apt update; curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
       - run: nvm use v18.16.0
       - run: git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"; npm run build
       - run: |
