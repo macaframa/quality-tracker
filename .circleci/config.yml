@@ -13,7 +13,8 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout
+      - run: sudo apt install nvm
+      - run: nvm use v18.16.0
       - run: git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"; npm run build
       - run: |
           # 1- Install AWS CLI
