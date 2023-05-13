@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  node: circleci/node@18.16.0
-
 workflows:
   build-deploy-workflow:
     jobs:
@@ -15,6 +12,7 @@ jobs:
   build_deploy:
     docker:
       - image: cimg/base:stable
+      - image: cimg/node:20.1.0
     steps:
       - run: git clone -b "$CIRCLE_BRANCH" "$CIRCLE_REPOSITORY_URL"; npm run build
       - run: |
