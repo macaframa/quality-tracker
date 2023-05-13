@@ -4,7 +4,6 @@ workflows:
   build-deploy-workflow:
     jobs:
       - build_deploy:
-        requires: -build
         filters:
           branches:
             only: main
