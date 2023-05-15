@@ -148,7 +148,7 @@ export default function Home() {
                 Number of Pets
               </NumberInput>
               <Counter name="adults" max={10}>
-                Adults
+                Adult Number
               </Counter>
               <CheckboxGroup
                 label="Choose all that apply"
