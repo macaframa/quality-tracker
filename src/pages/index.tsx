@@ -10,7 +10,7 @@ function Home() {
   return (
     <HomeScreen>
       <NavigationBar />
-      <Page title="Home">something</Page>
+      <Page title="Home">SOMETHING MORE!</Page>
     </HomeScreen>
   );
 }
